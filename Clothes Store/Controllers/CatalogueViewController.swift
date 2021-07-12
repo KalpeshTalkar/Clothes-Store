@@ -67,7 +67,7 @@ extension CatalogueViewController: UICollectionViewDelegate, UICollectionViewDat
 
         let product = products[indexPath.row]
 
-        let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "detailContainer") as! DetailViewContainerViewController
+        let detailVC = UIStoryboard(storyboard: .main).viewController(of: DetailViewContainerViewController.self)
         let navigationVC = UINavigationController(rootViewController: detailVC)
         detailVC.product = product
         Haptic.feedBack()
