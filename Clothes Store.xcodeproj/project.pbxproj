@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13069799264698800065C4C4 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 13069798264698800065C4C4 /* AlamofireImage */; };
 		13BBE6C12642AC250045F488 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 13BBE6C02642AC250045F488 /* Alamofire */; };
+		1845AF3D269C7B720091D937 /* StoryboardUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845AF3C269C7B720091D937 /* StoryboardUtils.swift */; };
 		BE5F27F822F035AF00F2C97D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F27F722F035AF00F2C97D /* AppDelegate.swift */; };
 		BE5F27FA22F035AF00F2C97D /* CatalogueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5F27F922F035AF00F2C97D /* CatalogueViewController.swift */; };
 		BE5F27FF22F035AF00F2C97D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE5F27FD22F035AF00F2C97D /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1845AF3C269C7B720091D937 /* StoryboardUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardUtils.swift; sourceTree = "<group>"; };
 		BE5F27F422F035AF00F2C97D /* Clothes Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clothes Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE5F27F722F035AF00F2C97D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE5F27F922F035AF00F2C97D /* CatalogueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1845AF3E269C86860091D937 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BE5F280222F035B100F2C97D /* LaunchScreen.storyboard */,
+				BE5F27FD22F035AF00F2C97D /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		BE5F27EB22F035AF00F2C97D = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +103,7 @@
 				BE5F282A22F24DA700F2C97D /* Views */,
 				BE5F282B22F24DC500F2C97D /* Controllers */,
 				BE5F282C22F24E2100F2C97D /* Helpers */,
+				1845AF3E269C86860091D937 /* Storyboards */,
 				BE5F283322F2506600F2C97D /* Resources */,
 				BE5F283422F2508700F2C97D /* Supporting Files */,
 			);
@@ -136,6 +148,7 @@
 				BE5F281322F068C500F2C97D /* UIView+Extensions.swift */,
 				BE5F282122F19C0200F2C97D /* HapticFeedback.swift */,
 				BE5F282322F1A13600F2C97D /* HUD.swift */,
+				1845AF3C269C7B720091D937 /* StoryboardUtils.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -144,9 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				BE5F27F722F035AF00F2C97D /* AppDelegate.swift */,
-				BE5F27FD22F035AF00F2C97D /* Main.storyboard */,
 				BE5F280022F035B100F2C97D /* Assets.xcassets */,
-				BE5F280222F035B100F2C97D /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -254,6 +265,7 @@
 				BE5F283022F24FF800F2C97D /* BasketViewTableViewCell.swift in Sources */,
 				BE5F282222F19C0300F2C97D /* HapticFeedback.swift in Sources */,
 				BE5F282022F0E4C600F2C97D /* DetailViewContainerViewController.swift in Sources */,
+				1845AF3D269C7B720091D937 /* StoryboardUtils.swift in Sources */,
 				BE5F27F822F035AF00F2C97D /* AppDelegate.swift in Sources */,
 				BE5F27FA22F035AF00F2C97D /* CatalogueViewController.swift in Sources */,
 				BE5F281222F05FFA00F2C97D /* CurrencyHelpers.swift in Sources */,
