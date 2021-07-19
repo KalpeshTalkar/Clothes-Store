@@ -32,6 +32,7 @@ class CatalogueViewController: UIViewController {
                     self.getProducts()
                     alert.dismiss(animated: true, completion: nil)
                 }))
+                alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
 
                 self.present(alert, animated: true, completion: nil)
             }else{
