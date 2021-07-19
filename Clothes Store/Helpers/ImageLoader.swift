@@ -12,7 +12,7 @@ import Foundation
 
 @available(iOS 14.0, *)
 struct ImageCacheKey: EnvironmentKey {
-    static let defaultValue: ImageCache = TemporaryImageCache()
+    static let defaultValue: ImageCache = TemporaryImageCache.shared
 }
 
 @available(iOS 14.0, *)
@@ -23,13 +23,14 @@ extension EnvironmentValues {
     }
 }
 
-@available(iOS 14.0, *)
 protocol ImageCache {
     subscript(_ url: URL) -> UIImage? { get set }
 }
 
-@available(iOS 14.0, *)
 struct TemporaryImageCache: ImageCache {
+
+    public static let shared = TemporaryImageCache()
+
     private let cache = NSCache<NSURL, UIImage>()
 
     subscript(_ key: URL) -> UIImage? {

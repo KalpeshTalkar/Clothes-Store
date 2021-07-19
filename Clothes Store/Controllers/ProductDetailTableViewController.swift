@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AlamofireImage
 
 class ProductDetailTableViewController: UITableViewController {
 
@@ -48,10 +47,8 @@ class ProductDetailTableViewController: UITableViewController {
         
         let placeHolderImage = UIImage(named: "placeholderImage")
         
-        if let imageURL = URL(string: product?.image ?? "") {
-            productImageView.af.setImage(withURL:  imageURL,
-                                     placeholderImage:  placeHolderImage,
-                                     imageTransition: .crossDissolve(0.3))
+        if let imageURL = product?.image, !imageURL.isEmpty {
+            productImageView.setImage(url: imageURL, defaultImage: placeHolderImage)
         } else {
             productImageView.image = placeHolderImage
         }

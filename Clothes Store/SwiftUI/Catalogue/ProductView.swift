@@ -7,12 +7,12 @@
 //
 
 import SwiftUI
-import AlamofireImage
 
 @available(iOS 14.0, *)
 struct ProductView: View {
 
     var product: Product
+    @State private (set) var showProductDetail: Bool = false
 
     var body: some View {
         GeometryReader { reader in
@@ -55,6 +55,13 @@ struct ProductView: View {
             }
             .padding(15)
             .background(Color.clear)
+            .onTapGesture {
+                Haptic.feedBack()
+                showProductDetail = true
+            }
+            .sheet(isPresented: $showProductDetail) {
+                CatalogueDetail(product: product)
+            }
         }
     }
 }

@@ -18,9 +18,13 @@ struct CatalogueView: View {
             count: 2
         )
 
+    private let dataService = DataService()
+
     @State var products: [Product] = []
     @State private (set) var showErrorAlert: Bool = false
     @State private (set) var showLoader: Bool = false
+    @State private (set) var showProductDetail: Bool = false
+    @State private (set) var selectedProduct: Product? = nil
 
     var body: some View {
         NavigationView {
@@ -32,7 +36,8 @@ struct CatalogueView: View {
                     ScrollView {
                         LazyVGrid(columns: gridItemLayout) {
                             ForEach(0..<products.count) { i in
-                                ProductView(product: products[i])
+                                let product = products[i]
+                                ProductView(product: product)
                                     .frame(height: 250)
                             }
                         }
@@ -55,7 +60,7 @@ struct CatalogueView: View {
 
     private func getProducts() {
         showLoader = true
-        DataService.getProducts { (products, error) in
+        dataService.getProducts { (products, error) in
             self.showLoader = false
             if error != nil {
                 self.showErrorAlert = true

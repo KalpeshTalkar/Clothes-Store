@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 // MARK: - Products
 struct Products: Codable {
@@ -34,5 +33,3 @@ enum Category: String, Codable, Hashable {
 struct Cart: Codable {
     let cartId, productId: Int?
 }
-
-
