@@ -6,6 +6,7 @@
 //  Copyright © 2021 Deloitte. All rights reserved.
 //
 import UIKit
+import SwiftUI
 
 class TabBarController: UITabBarController {
 
@@ -13,10 +14,14 @@ class TabBarController: UITabBarController {
     var tabItem : UITabBarItem?
 
     //Variables
-  
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if #available(iOS 14, *) {
+            let vc =  UIHostingController(rootView: CatalogueView())
+            vc.tabBarItem = UITabBarItem(title: "Catalogue", image: UIImage(named: "search"), tag: 0)
+            viewControllers?[0] = vc
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

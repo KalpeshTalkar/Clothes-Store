@@ -15,7 +15,7 @@ struct Products: Codable {
 }
 
 // MARK: - Product
-struct Product: Codable {
+struct Product: Codable, Hashable {
     var productId, name: String?
     var category: Category?
     var price: Float?
@@ -24,7 +24,7 @@ struct Product: Codable {
     var image: String?
 }
 
-enum Category: String, Codable {
+enum Category: String, Codable, Hashable {
     case pants = "Pants"
     case shoes = "Shoes"
     case tops = "Tops"
