@@ -1,11 +1,24 @@
-# Overview
-Please provide a summary of the change / issue with a proper context
+<!-- Ticket details and link -->
+[WEBRTC-XXX - Ticket title](https://telnyx.atlassian.net/browse/WEBRTC-XXX)
+---
+<!-- Describe your change here -->
+Please provide a summary of the change / issue with a proper context.
 
-# Screenshots
-- Please attach screenshots if applicable else delete this section.
+## :older_man: :baby: Behaviors
+### Before changes
+- Describe the behaviour before making the changes.
 
-# Testing
-- Mention the steps to test the resolution / functionality.
+### After changes
+- Describe the behaviour and impact after the changes.
 
-# TODO
-- Mention any TODO items if any else remove this section.
+## TODO
+Please mention pending items if any.
+
+## ✋ Manual testing
+1. Please list down all the steps required to test the changes.
+
+## Known Issues
+Please mention known issues if any.
+
+## Screenshots
+Please attach the screenshots if required
